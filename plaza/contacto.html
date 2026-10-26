@@ -27,3 +27,141 @@ Ejercicio 08 · La letra
   - El mismo <link> de Google Fonts que en index.html.
 ============================================================
 -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Sabores de la Plaza</a>
+
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#menuPrincipal"
+        aria-controls="menuPrincipal"
+        aria-expanded="false"
+        aria-label="Abrir menu"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="menuPrincipal">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="puestos.html">Puestos</a></li>
+          <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container py-5">
+    <div class="row justify-content-center">
+      <div class="col-12 col-lg-6">
+        <form class="p-4 border rounded shadow-sm bg-white">
+          <h1 class="h3 mb-4">Pide tu pedido</h1>
+
+          <div class="mb-3">
+            <label for="nombre" class="form-label">Nombre</label>
+            <input id="nombre" type="text" class="form-control" placeholder="Tu nombre">
+          </div>
+
+          <div class="mb-3">
+            <label for="telefono" class="form-label">Teléfono o correo</label>
+            <input id="telefono" type="email" class="form-control" placeholder="tu@email.com">
+          </div>
+
+          <div class="mb-3">
+            <label for="puesto" class="form-label">Puesto favorito</label>
+            <select id="puesto" class="form-select">
+              <option selected disabled>Elige un puesto</option>
+              <option value="frutas">Frutas</option>
+              <option value="panaderia">Panadería</option>
+              <option value="almuerzos">Almuerzos</option>
+              <option value="jugos">Jugos</option>
+              <option value="cafe">Café</option>
+            </select>
+          </div>
+
+          <div class="mb-3">
+            <label for="mensaje" class="form-label">Mensaje</label>
+            <textarea id="mensaje" class="form-control" rows="4" placeholder="Cuéntanos qué te gustaría pedir..."></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary">Enviar pedido</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="mt-5">
+      <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#modalGracias">
+        Ver información importante
+      </button>
+    </div>
+
+    <div class="accordion mt-5" id="faqPlaza">
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="true">
+            ¿Cuánto tarda un pedido?
+          </button>
+        </h2>
+        <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqPlaza">
+          <div class="accordion-body">Normalmente lo preparamos en 20 a 30 minutos, según la cantidad y la franja horaria.</div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2" aria-expanded="false">
+            ¿Puedo pedir para llevar?
+          </button>
+        </h2>
+        <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqPlaza">
+          <div class="accordion-body">Sí, todos nuestros productos están listos para llevar y también podemos preparar combos para compartir.</div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3" aria-expanded="false">
+            ¿Tienen opciones para dietas especiales?
+          </button>
+        </h2>
+        <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqPlaza">
+          <div class="accordion-body">Sí, contamos con opciones sin azúcar, vegetarianas y con ingredientes frescos del día.</div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div class="modal fade" id="modalGracias" tabindex="-1" aria-labelledby="modalGraciasLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title h5" id="modalGraciasLabel">¡Gracias por contactarnos!</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body">Te responderemos en cuanto revisemos tu pedido y disponibilidad.</div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Entendido</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

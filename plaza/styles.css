@@ -17,3 +17,48 @@ Recuerda: este archivo se enlaza DESPUÉS de Bootstrap.
 La paleta es tuya: colores cálidos de plaza de mercado.
 ============================================================
 */
+
+:root {
+  --bs-primary: #d97732;
+  --bs-primary-rgb: 217, 119, 50;
+  --bs-body-font-family: "Poppins", "Segoe UI", sans-serif;
+}
+
+body {
+  background: #fffaf3;
+  color: #2f241d;
+}
+
+.navbar {
+  box-shadow: 0 2px 12px rgba(42, 25, 10, 0.08);
+}
+
+.navbar-brand {
+  font-weight: 700;
+  color: #7a3e1d !important;
+}
+
+.btn-primary {
+  --bs-btn-bg: var(--bs-primary);
+  --bs-btn-border-color: var(--bs-primary);
+  --bs-btn-hover-bg: #b96122;
+  --bs-btn-hover-border-color: #b96122;
+  --bs-btn-active-bg: #9f4f1d;
+  --bs-btn-active-border-color: #9f4f1d;
+}
+
+.card {
+  border: 1px solid rgba(127, 79, 33, 0.12);
+  border-radius: 1rem;
+}
+
+.list-group-item.active {
+  background-color: var(--bs-primary);
+  border-color: var(--bs-primary);
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: rgba(217, 119, 50, 0.1);
+  color: #5b2b12;
+}
+

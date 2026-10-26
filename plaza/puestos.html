@@ -28,3 +28,137 @@ Ejercicio 08 · La letra
   - El mismo <link> de Google Fonts que en index.html.
 ============================================================
 -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Puestos</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Sabores de la Plaza</a>
+
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#menuPrincipal"
+        aria-controls="menuPrincipal"
+        aria-expanded="false"
+        aria-label="Abrir menu"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="menuPrincipal">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="puestos.html">Puestos</a></li>
+          <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container py-5">
+    <div class="row g-4">
+      <aside class="col-12 col-lg-3">
+        <div class="list-group">
+          <a class="list-group-item list-group-item-action active" href="#">Frutas</a>
+          <a class="list-group-item list-group-item-action" href="#">Panadería</a>
+          <a class="list-group-item list-group-item-action" href="#">Almuerzos</a>
+          <a class="list-group-item list-group-item-action" href="#">Jugos</a>
+          <a class="list-group-item list-group-item-action" href="#">Café</a>
+        </div>
+      </aside>
+
+      <div class="col-12 col-lg-9">
+        <div class="row g-4">
+          <div class="col-12 col-md-6 col-xl-3">
+            <div class="card h-100">
+              <div class="card-body">
+                <span class="badge text-bg-success mb-2">Nuevo</span>
+                <h2 class="card-title h5">Cajita de frutas</h2>
+                <p class="card-text">Selección de la temporada con mango, papaya y fresas.</p>
+                <button class="btn btn-primary" type="button">Pedir</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 col-xl-3">
+            <div class="card h-100">
+              <div class="card-body">
+                <span class="badge text-bg-warning mb-2">Popular</span>
+                <h2 class="card-title h5">Pan artesanal</h2>
+                <p class="card-text">Horneado cada mañana con harina integral y semillas.</p>
+                <button class="btn btn-primary" type="button">Pedir</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 col-xl-3">
+            <div class="card h-100">
+              <div class="card-body">
+                <span class="badge text-bg-info mb-2">Sin conservantes</span>
+                <h2 class="card-title h5">Combo almuerzo</h2>
+                <p class="card-text">Plato del día con proteína, ensalada y bebida natural.</p>
+                <button class="btn btn-primary" type="button">Pedir</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 col-xl-3">
+            <div class="card h-100">
+              <div class="card-body">
+                <span class="badge text-bg-danger mb-2">Top</span>
+                <h2 class="card-title h5">Limonada fresca</h2>
+                <p class="card-text">Refrescante y preparada al momento con cítricos locales.</p>
+                <button class="btn btn-primary" type="button">Pedir</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="table-responsive mt-4">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th>Producto</th>
+                <th>Precio</th>
+                <th>Detalle</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Frutas de temporada</td>
+                <td>$8.000</td>
+                <td>Por canasta</td>
+              </tr>
+              <tr>
+                <td>Pan artesanal</td>
+                <td>$3.500</td>
+                <td>Unidad</td>
+              </tr>
+              <tr>
+                <td>Combo almuerzo</td>
+                <td>$12.000</td>
+                <td>Incluye bebida</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
